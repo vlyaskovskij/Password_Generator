@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Password Generator</title>
+
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="title">Password Generator</h1>
+
+      <div class="option">
+        <div class="option-wrapper">
+          <input
+            type="checkbox"
+            id="numbers"
+            name="0123456789"
+            class="checkbox"
+          />
+          <label for="numbers"></label>
+          <p>Numbers</p>
+        </div>
+
+        <div class="option-wrapper">
+          <input
+            type="checkbox"
+            id="lowercase"
+            name="abcdefghijklmnopqrstuvwxyz"
+            class="checkbox"
+          />
+          <label for="lowercase"></label>
+          <p>LowerCase</p>
+        </div>
+
+        <div class="option-wrapper">
+          <input
+            type="checkbox"
+            id="uppercase"
+            name="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            class="checkbox"
+          />
+          <label for="uppercase"></label>
+          <p>UpperCase</p>
+        </div>
+
+        <div class="option-wrapper">
+          <input
+            type="checkbox"
+            id="symbols"
+            name="!@#$%^&*()"
+            class="checkbox"
+          />
+          <label for="symbols"></label>
+          <p>Symbols</p>
+        </div>
+      </div>
+
+      <div class="lenght">
+        <h2 class="subtitle">Password Lenght</h2>
+
+        <div class="lenght-wrapper">
+          <input
+            type="range"
+            id="lenght"
+            name="lenght"
+            min="4"
+            max="10"
+            value="4"
+          />
+          <div class="lenght-wrapper__value">
+            <p class="value-min">4</p>
+            <p class="value-choose">7</p>
+            <p class="value-max">10</p>
+          </div>
+        </div>
+
+        <button type="button" id="generate">Generate</button>
+
+        <div class="password">
+          <div class="password-wrapper">
+            <p>Password</p>
+            <button id="copy" type="button" onclick="copyBtn ()">COPY</button>
+          </div>
+          <p class="password-generate" id="needCopy"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
